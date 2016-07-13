@@ -27,6 +27,10 @@ app.get('/:date', function (req, res) {
     res.send({ "unix": unixTime, "natural": naturalTimeString });
 });
 
+app.get('/', function (req, res) {
+    res.send("To use this app pass in a date in unix or natural form such as '/December 15, 2015'");
+});    
+
 app.listen(port, function() {
     console.log('Our app is running on http://localhost:' + port);
 });
